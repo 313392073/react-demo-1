@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import logo from '../logo.svg';
 import '../css/App.css';
-import App2 from './component/App2';
+import App2 from './App2';
 
 class App extends Component {
 
@@ -33,7 +33,7 @@ class App extends Component {
 					To get started, edit <code>src/App.js</code> and save to reload.
 				</p>
 				<div>opened seconds: {this.state.time}</div>
-				<App2/>
+				<App2 from={this.state.time}/>
 			</div>
 		);
 	}

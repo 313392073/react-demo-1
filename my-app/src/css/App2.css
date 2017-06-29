@@ -8,3 +8,9 @@
     width: 100%;
     height: 300px;
 }
+.clock-text{
+    height: 30px;
+    line-height: 30px;
+    background-color: #0074D9;
+    color: #ffffff;
+}
