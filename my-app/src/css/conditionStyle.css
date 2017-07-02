@@ -12,13 +12,13 @@
     text-align: center;
 }
 .top{
-    background-color: darkred;
+    background-color: #5476ba;
 }
 .middle{
-    background-color: greenyellow;
+    background-color: #f0e589;
 }
 .bottom{
-    background-color: blueviolet;
+    background-color: #7DDC6F;
 }
 .btn-wrap button{
     margin-right: 40px;
