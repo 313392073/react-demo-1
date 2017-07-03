@@ -20,11 +20,10 @@ class ConRender extends Component{
 			showTop: true,
 			showMiddle: true,
 			showBottom: true
-		}
+		};
 		this.handleTop = this.handleTop.bind(this);
 		this.handleMiddle = this.handleMiddle.bind(this);
 		this.handleBottom = this.handleBottom.bind(this);
-
 	}
 
 	handleTop(){

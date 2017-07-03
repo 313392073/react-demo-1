@@ -5,10 +5,10 @@ import Appp from './component/App';
 //import registerServiceWorker from './registerServiceWorker';
 import $ from 'jquery';
 
-$(function(){
-	console.log($);
-	ReactDOM.render(<Appp />, document.getElementById('root'));
-});
+
+
+ReactDOM.render(<Appp />, document.getElementById('root'));
+
 
 
 
