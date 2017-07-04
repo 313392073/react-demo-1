@@ -6,6 +6,7 @@ import App22 from './App2';
 import ConRender from './conditionalRender';
 import List from './listAndKeys';
 import FormDemo from './formDemo';
+import LiftingState from './liftingStateUp/liftingStateUp';
 
 
 class App extends Component {
@@ -36,6 +37,7 @@ class App extends Component {
 				<ConRender/>
                 <List/>
 				<FormDemo sel="op22"/>
+				<LiftingState/>
 			</div>
 		);
 	}

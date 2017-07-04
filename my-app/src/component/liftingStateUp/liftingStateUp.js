@@ -1,0 +1,68 @@
+/**
+ * Created by Administrator on 2017/7/4.
+ */
+
+import React, {Component} from 'react';
+import TemperatureInput from './temperatureInput';
+import BoilingVerdict from './boilingVerdict';
+
+class LiftingState extends Component{
+	constructor(props){
+		super(props);
+		this.state = {
+			temperature: "",
+			scale: ""
+		};
+		this.handleCelsiusChange = this.handleCelsiusChange.bind(this);
+		this.handleFahrenheitChange = this.handleFahrenheitChange.bind(this);
+	}
+
+	handleCelsiusChange(temperature){
+		this.setState({temperature,scale: "c"});
+	}
+
+	handleFahrenheitChange(temperature){
+		this.setState({temperature,scale: "f"});
+	}
+
+	render(){
+
+		const scale = this.state.scale;
+		const temperature = this.state.temperature;
+		const celsius = scale === "f" ? tryConvert(temperature,toCelsius) : temperature;
+		const fahrenheit = scale === "c" ? tryConvert(temperature,toFahrenheit) : temperature;
+
+		return(<div>
+			<TemperatureInput
+				scale="c"
+				temperature={celsius}
+				onTemperatureChange={this.handleCelsiusChange}/>
+			<TemperatureInput
+				scale="f"
+				temperature={fahrenheit}
+				onTemperatureChange={this.handleFahrenheitChange}/>
+			<BoilingVerdict celsius={celsius}/>
+
+		</div>);
+	}
+}
+export default LiftingState;
+
+//函数放在类的外层可以在类中直接访问
+//建议：业务无关的属性、方法、对象等（工具）放到独立的模块中，需要时引用即可。
+function toCelsius(fahrenheit) {
+	return (fahrenheit - 32) * 5 / 9;
+}
+
+function toFahrenheit(celsius) {
+	return (celsius * 9 / 5) + 32;
+}
+function tryConvert(temperature, convert) {
+	const input = parseFloat(temperature);
+	if (Number.isNaN(input)) {
+		return '';
+	}
+	const output = convert(input);
+	const rounded = Math.round(output * 1000) / 1000;
+	return rounded.toString();
+}
