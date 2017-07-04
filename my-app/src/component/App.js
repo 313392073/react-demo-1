@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import logo from '../logo.svg';
+//import logo from '../logo.svg';
 import '../css/App.css';
 import Event from './eventDemo';
 import App22 from './App2';
@@ -7,6 +7,8 @@ import ConRender from './conditionalRender';
 import List from './listAndKeys';
 import FormDemo from './formDemo';
 import LiftingState from './liftingStateUp/liftingStateUp';
+import RefsDemo from './refsDemo';
+
 
 
 class App extends Component {
@@ -38,6 +40,7 @@ class App extends Component {
                 <List/>
 				<FormDemo sel="op22"/>
 				<LiftingState/>
+                <RefsDemo/>
 			</div>
 		);
 	}
