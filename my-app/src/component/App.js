@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-//import logo from '../logo.svg';
 import '../css/App.css';
 import Event from './eventDemo';
 import App22 from './App2';
@@ -9,6 +8,7 @@ import FormDemo from './formDemo';
 import LiftingState from './liftingStateUp/liftingStateUp';
 import RefsDemo from './refsDemo';
 
+import {Router,Route,IndexRoute,Link,hashHistory} from 'react-router';
 
 
 class App extends Component {
