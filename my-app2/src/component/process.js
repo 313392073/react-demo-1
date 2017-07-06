@@ -6,7 +6,11 @@ class Process extends Component{
         super(props);
     }
 
+
+
    render(){
+    	//路由会向组件传入match作为prop
+    	console.log(this.props.match);
         return(
             <div>
                 <p>this is process page!</p>

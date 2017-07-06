@@ -12,10 +12,10 @@ class App extends Component{
         return(
             <div>
                 <ul>
-                    <li><Link to={"/home"}>Home</Link></li>
+                    <li><Link to={"/"}>Home</Link></li>
                     <li><Link to={"/sqlEditor"}>SQLEditor</Link></li>
                     <li><Link to={"/process"}>Process</Link></li>
-
+	                <li><Link to="/redirect">redirect</Link></li>
                 </ul>
             </div>
         );
