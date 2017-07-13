@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
-import '../css/App.css';
+import CtrBtn from './btn'
+import Light from './light';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        APP
-      </div>
-    );
-  }
+//定义组件
+class App extends Component{
+	render() {
+		return (
+			<div>
+				<Light store={this.props.store}/>
+				<CtrBtn store={this.props.store}/>
+			</div>
+		);
+	}
 }
 
 export default App;
