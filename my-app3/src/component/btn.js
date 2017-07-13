@@ -8,8 +8,7 @@ class CtrBtn extends Component{
 
 	render(){
 
-		const lightState = this.props.lightState;
-		const {go,stop,caution} = this.props;
+		const {go,stop,caution,lightState} = this.props;
 		console.log("btn");
 
 		return(
