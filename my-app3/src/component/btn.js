@@ -3,46 +3,35 @@
  */
 
 import React, {Component} from 'react';
-import {cautionAction, stopAction, goAction} from './action';
 
 class CtrBtn extends Component{
 
-	constructor(props){
-		super(props);
-
-	}
-
-	componentWillMount() {
-		this.props.store.subscribe(() => {
-			this.forceUpdate();
-		});
-	}
-
 	render(){
+
+		const lightState = this.props.lightState;
+		const {go,stop,caution} = this.props;
 		console.log("btn");
-		const store = this.props.store;
-		const state = store.getState();
+
 		return(
 			<div className="btn-wrap">
 				<button className="stop"
-					onClick={() => {store.dispatch(stopAction)}}
-			        disabled={state === "STOP" || state === "GO"}>
+					onClick={stop}
+			        disabled={lightState === "STOP" || lightState === "GO"}>
 				stop
 				</button>
 
 				<button className="go"
-					onClick={() => {store.dispatch(goAction)}}
-					disabled={state === "GO" || state === "CAUTION"}>
+					onClick={go}
+					disabled={lightState === "GO" || lightState === "CAUTION"}>
 				go</button>
 
 				<button className="caution"
-					onClick={() => {store.dispatch(cautionAction)}}
-					disabled={state === "STOP" || state === "CAUTION"}>
+					onClick={caution}
+					disabled={lightState === "STOP" || lightState === "CAUTION"}>
 				caution</button>
 			</div>
 		);
 	}
-
 
 }
 
