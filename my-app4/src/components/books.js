@@ -6,9 +6,6 @@ import React, {Component} from 'react';
 import Book from './book';
 
 class Books extends Component{
-	constructor(props){
-		super(props);
-	}
 
 	bookMarkup(){
 		const books = this.props.books;

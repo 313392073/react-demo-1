@@ -22,16 +22,13 @@ const thumbnail = (item,link) => {
 		<a href={link} style={style.linkStyle}>
 			<img
 				src={item.volumeInfo.imageLinks.thumbnail}
-				style={style.imgStyle}/>
+				style={style.imgStyle}
+				alt="failed"/>
 		</a>
 	);
 };
 
 class Book extends Component{
-	constructor(props){
-		super(props);
-	}
-
 
 	render(){
 		const {item} = this.props;
