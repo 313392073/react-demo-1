@@ -9,22 +9,22 @@ export const setTopic = topic => ({
 
 const URL = 'https://www.googleapis.com/books/v1/volumes?q=';
 const fetchCurrentTopic = (dispatch, state) => {
-	//dispatch(fetchStart());
 
+	dispatch(fetchStart);
 	fetch( URL + state.topic )
 		.then( res => res.json() )
 		.then( json => {
 			if( json.error ){
 				console.log(json);
-				//dispatch(fetchFailed(json.error));
+				dispatch(fetchFailed);
 			}else{
 				console.log(json);
-				//dispatch(fetchComplete(json));
+				dispatch(fetchComplete(json));
 			}
 		} )
 		.catch(json => {
 			console.log(json);
-			//dispatch(fetchFailed(json.error));
+			dispatch(fetchFailed);
 		});
 };
 
@@ -33,3 +33,33 @@ export const fetchBooks = () => ({
 	fn: fetchCurrentTopic
 
 });
+
+export const fetchComplete = json =>({
+	type: 'FETCH_COMPAETE',
+	json
+});
+
+export const fetchFailed = {
+	type: 'FETCH_FAILED'
+};
+
+export const fetchStart = {
+	type: 'FETCH_STARTED'
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

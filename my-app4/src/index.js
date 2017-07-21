@@ -4,7 +4,9 @@ import './css/index.css';
 import App from './components/App';
 import {Provider} from 'react-redux';
 import store from './store';
+import {fetchBooks} from './actions';
 
+store.dispatch(fetchBooks());
 
 ReactDOM.render(
 	<Provider store={store}>

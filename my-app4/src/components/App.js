@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ControlContainer from '../container/controlContainer';
+import BooksContainer from '../container/booksContainer';
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
 	        </div>
 	        <hr />
 			<ControlContainer />
+	        <BooksContainer />
         </div>
      );
   }

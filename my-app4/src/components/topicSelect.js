@@ -13,7 +13,8 @@ class TopicSelect extends Component{
 	}
 
 	handleKeyPress(e){
-		this.props.fetchTopic(e.target.value);
+		if (e.key === 'Enter')
+			this.props.fetchTopic(e.target.value);
 	}
 
 	handleChange(e){
