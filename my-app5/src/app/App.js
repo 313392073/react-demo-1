@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Link, Route} from 'react-router';
-import Page1 from '../page1/page1';
-import Page2 from '../page2/page2';
+import {Link} from 'react-router';
 
 
 class App extends Component {
@@ -15,10 +13,7 @@ class App extends Component {
 			      <li><Link to="/page2" activeClassName="activeMenu">page2</Link></li>
 		      </ul>
 	      </div>
-	      <div>
-		      <Route path="/page1" component={Page1} />
-		      <Route path="/page1" component={Page2} />
-	      </div>
+	      {this.props.children}
       </div>
     );
   }
