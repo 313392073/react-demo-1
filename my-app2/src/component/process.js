@@ -13,6 +13,7 @@ class Process extends Component{
 
    render(){
 
+
         //exact:当路由严格匹配时渲染
         //strict:当结尾斜杠严格匹配时渲染
     	//路由会向组件传入match作为prop

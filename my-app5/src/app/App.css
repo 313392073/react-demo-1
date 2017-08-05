@@ -1,3 +1,17 @@
 .App {
   text-align: center;
 }
+
+ul li{
+  float: left;
+  height: 32px;
+  width: 75px;
+  border: 1px solid rgba(53, 68, 85, 0.51);
+}
+
+ul li:hover{
+  background-color: rgba(121, 154, 175, 0.51);
+}
+.activeMenu{
+  background-color: rgba(53, 68, 85, 0.51);
+}
