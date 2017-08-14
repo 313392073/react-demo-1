@@ -13,5 +13,5 @@ ul li:hover{
   background-color: rgba(121, 154, 175, 0.51);
 }
 .activeMenu{
-  background-color: rgba(53, 68, 85, 0.51);
+  background-color: red;
 }

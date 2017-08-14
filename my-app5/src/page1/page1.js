@@ -21,6 +21,9 @@ class Page1 extends Component{
 	render(){
 
         const {page1Topic} = this.props;
+		/*console.log("=======");
+		console.log(this.props);
+		console.log("=======");*/
 
 		return(
 			<div>
@@ -33,6 +36,8 @@ class Page1 extends Component{
                     />
 					<button onClick={this.handleClick}>change Topic</button>
 				</div>
+				<hr/>
+				{this.props.children}
 			</div>
 		);
 	}
